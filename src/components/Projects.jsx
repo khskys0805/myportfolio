@@ -48,8 +48,8 @@ export default function Projects() {
 			title: "My Portfolio",
 			description: "저의 포트폴리오 사이트입니다.",
 			detail: "“나는 솔로” 콘셉트로 제작한 포트폴리오 사이트로, 저에 대한 소개, 사용 기술, 그리고 프로젝트들을 중심으로 구성되어 있습니다.",
-			git_link: "https://github.com/khskys0805/Snap4U",
-			web_link: "https://snap4-u.vercel.app/",
+			git_link: "https://github.com/khskys0805/myportfolio",
+			web_link: "https://myportfolio-y83w.vercel.app/",
 			image: "/images/4.jpg",
 			tags: ["React", "JavaScript", "Vite", "TailWind CSS", "Vercel"], // 기술 키워드 추가
 		},
@@ -60,7 +60,7 @@ export default function Projects() {
 			id="projects"
 			className="min-h-screen py-20 px-6 md:px-20 bg-white"
 		>
-			<h2 className="text-3xl mb-10 text-[#864bfd] font-rix-inoo text-center">
+			<h2 className="text-4xl mb-10 text-[#864bfd] font-tangs text-center">
 				프로젝트
 			</h2>
 

@@ -1,3 +1,24 @@
 .text-shadow {
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+/* global.css 또는 컴포넌트에서 import한 CSS 파일에 추가 */
+
+.swiper-button-next,
+.swiper-button-prev {
+	color: #ffe5f3; /* 원하는 화살표 색상 */
+}
+.swiper-button-next {
+	right: 20px;
+}
+.swiper-button-prev {
+	left: 20px;
+}
+.swiper-pagination-bullet {
+	background-color: #383838; /* 기본 점 색상 */
+	opacity: 1; /* 선택 안 된 점도 보이게 */
+}
+
+.swiper-pagination-bullet-active {
+	background-color: #864bfd; /* 선택된 점 색상 */
+}

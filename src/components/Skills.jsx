@@ -7,32 +7,32 @@ export default function Skills() {
 		{
 			title: "HTML",
 			content:
-				"시맨틱 태그로 구조적인 마크업을 작성하고, label과 input을 사용하여 접근성을 개선합니다.",
+				"시맨틱 태그를 사용해 구조적이고 읽기 쉬운 마크업을 작성하며, label과 input 태그를 통해 접근성을 향상시키고, 실시간 입력 검증을 통해 오류를 즉시 피드백합니다.",
 		},
 		{
 			title: "CSS",
 			content:
-				"미디어 쿼리로 반응형 웹을 구현하고, styled-components로 컴포넌트 단위 스타일링을 합니다.",
+				"미디어 쿼리로 반응형 웹을 구현할 수 있고, styled-components로 컴포넌트 단위 스타일을 작성하여 유지보수를 용이하게 합니다. Flexbox와 Grid를 활용하여 레이아웃을 구현할 수 있으며, Tailwind CSS를 사용하여 빠르고 효율적으로 스타일을 적용할 수 있습니다.",
 		},
 		{
 			title: "JavaScript",
 			content:
-				"ES6 모듈, 고차 함수, async/await로 비동기 흐름을 제어하고 유지보수를 높입니다.",
+				"ES6 모듈을 사용하여 코드 재사용성을 높이고, 고차 함수 및 async/await를 활용하여 비동기 작업을 안정적으로 처리합니다. DOM 조작과 이벤트 리스너를 통한 인터랙션 구현도 가능합니다.",
 		},
 		{
 			title: "React",
 			content:
-				"useState, useEffect 등 훅을 통해 상태와 사이드 이펙트를 관리하고, 라우팅과 재사용 컴포넌트를 구성합니다.",
+				"useState, useEffect 훅을 사용하여 함수형 컴포넌트에서 상태 관리와 사이드 이펙트를 처리할 수 있습니다. React Router를 사용하여 SPA 내 페이지 간 네비게이션을 구현할 수 있습니다.",
 		},
 		{
 			title: "TypeScript",
 			content:
-				"정적 타입 기반의 안정적인 코드 작성에 익숙해지고, 기존 JS 프로젝트에 점진적으로 도입하고 있습니다.",
+				"TypeScript의 주요 문법을 학습하며, 정적 타입 기반의 안정적인 코드 작성 방식에 익숙해지고 있습니다. JS 프로젝트에 점진적으로 도입해, 오류 방지와 명확한 데이터 구조 정의에 활용하고 있습니다.",
 		},
 		{
 			title: "ETC",
 			content:
-				"Git, Figma, Redux, Zustand, Jotai, Vercel, Photoshop을 다양한 프로젝트에 사용했습니다.",
+				"Git, Figma, Redux, Zustand, Jotai, Vercel, Photoshop, Notion, jQuery",
 		},
 	];
 
