@@ -6,7 +6,7 @@ import cloud4 from "../assets/cloud4.png";
 import cloud5 from "../assets/cloud5.png";
 import city from "../assets/city.png";
 import Typewriter from "typewriter-effect";
-import Navbar from "./NavBar";
+import Navbar from "./Navbar";
 
 export default function Introduction() {
 	return (
