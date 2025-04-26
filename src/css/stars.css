@@ -1,0 +1,34 @@
+/* stars.css */
+@keyframes sparkle {
+	0% {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+}
+
+.star {
+	position: absolute;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.8);
+	animation: sparkle 1.5s infinite;
+}
+
+.star:nth-child(odd) {
+	animation-duration: 2s;
+}
+
+.star:nth-child(even) {
+	animation-duration: 2.5s;
+}
+
+.star:nth-child(3) {
+	animation-duration: 3s;
+}
