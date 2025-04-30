@@ -14,10 +14,10 @@ export default function About() {
 			</h2>
 
 			{/* 메인 컨테이너: 기본 세로 정렬, 2xl부터 가로 정렬 */}
-			<div className="flex flex-col xl:flex-row gap-8 2xl:gap-10 px-4">
+			<div className="flex flex-col xl:flex-row gap-24 2xl:gap-10 px-4">
 				{/* 위/왼쪽: 자기소개 내용 영역 */}
 				<div className="w-full xl:w-[50%] 2xl:w-[45%]">
-					<div className="xl:text-center 2xl:text-left">
+					<div className="text-center xl:text-left">
 						<p className="text-2xl font-bold mb-6">
 							안녕하세요.{" "}
 							<span className="relative font-semibold z-10 before:content-[''] before:absolute before:left-0 before:bottom-[2px] before:w-full before:h-[8px] before:bg-lightpink before:z-[-1]">
@@ -46,22 +46,25 @@ export default function About() {
 						</p>
 
 						{/* 링크 영역 */}
-						<div className="mt-6 sm:mt-8 flex flex-wrap gap-3 sm:gap-4 xl:justify-center 2xl:justify-start">
+						<div className="mt-6 sm:mt-8 flex flex-wrap gap-3 sm:gap-4 justify-center xl:justify-start">
 							<a
-								href="링크 주소"
+								href="https://github.com/khskys0805"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-gray-700 hover:text-gray-900"
+								className="flex items-center gap-1.5 sm:gap-2 bg-[rgb(228,131,215)] hover:bg-[#c262b9] text-white px-4 sm:px-5 py-2 rounded-full font-semibold text-base sm:text-lg transition"
 							>
-								<FaGithub size={30} />
+								<FaGithub className="w-5 h-5 sm:w-6 sm:h-6" />
+								GitHub
 							</a>
+
 							<a
-								href="링크 주소"
+								href="https://velog.io/@khskys0805/posts"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-gray-700 hover:text-gray-900"
+								className="flex items-center gap-1.5 sm:gap-2 bg-[#864bfd] hover:bg-[#5c36c4] text-white px-4 sm:px-5 py-2 rounded-full font-semibold text-base sm:text-lg transition"
 							>
-								<FaLink size={30} />
+								<FaLink className="w-5 h-5 sm:w-6 sm:h-6" />
+								Blog
 							</a>
 						</div>
 					</div>
