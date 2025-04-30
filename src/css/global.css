@@ -1,24 +1,99 @@
+/* 텍스트 그림자 */
 .text-shadow {
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* global.css 또는 컴포넌트에서 import한 CSS 파일에 추가 */
-
+/* swiper 버튼 (화살표) 기본 설정 */
 .swiper-button-next,
 .swiper-button-prev {
-	color: #ffe5f3; /* 원하는 화살표 색상 */
+	color: #ffe5f3; /* 화살표 색상 */
+	position: absolute; /* 위치 절대 지정 */
+	top: 50%; /* 기본 위치는 수직 중앙 */
+	z-index: 10; /* 다른 요소 위로 표시되도록 */
 }
-.swiper-button-next {
-	right: 20px;
-}
-.swiper-button-prev {
-	left: 20px;
-}
+
+/* Swiper 점 색상 */
 .swiper-pagination-bullet {
 	background-color: #383838; /* 기본 점 색상 */
 	opacity: 1; /* 선택 안 된 점도 보이게 */
+	width: 12px; /* 기본 점 크기 */
+	height: 12px;
 }
 
+/* 선택된 점 색상 */
 .swiper-pagination-bullet-active {
 	background-color: #864bfd; /* 선택된 점 색상 */
+}
+
+/* 반응형 스타일 */
+
+/* 작은 화면에서 화살표 크기 및 위치 조정 */
+
+/* Next 화살표 */
+@media (max-width: 640px) {
+	.swiper-button-next {
+		font-size: 14px; /* 작은 화면에서 Next 화살표 크기 감소 */
+		right: 10px; /* 오른쪽 화살표 간격 줄이기 */
+		bottom: 10px; /* 작은 화면에서는 화살표를 맨 아래로 이동 */
+	}
+
+	.swiper-button-prev {
+		font-size: 14px; /* 작은 화면에서 Prev 화살표 크기 감소 */
+		left: 10px; /* 왼쪽 화살표 간격 줄이기 */
+		bottom: 10px; /* 작은 화면에서는 화살표를 맨 아래로 이동 */
+	}
+
+	.swiper-pagination-bullet {
+		width: 8px; /* 작은 화면에서 점 크기 감소 */
+		height: 8px;
+	}
+}
+
+/* 중간 화면에서 화살표 크기 및 위치 조정 */
+
+/* Next 화살표 */
+@media (min-width: 641px) and (max-width: 1024px) {
+	.swiper-button-next {
+		font-size: 22px; /* 중간 화면에서 Next 화살표 크기 조정 */
+		right: 15px; /* 오른쪽 화살표 간격 조정 */
+		top: 50%; /* 중앙으로 유지 */
+	}
+
+	.swiper-button-prev {
+		font-size: 22px; /* 중간 화면에서 Prev 화살표 크기 조정 */
+		left: 15px; /* 왼쪽 화살표 간격 조정 */
+		top: 50%; /* 중앙으로 유지 */
+	}
+
+	.swiper-pagination-bullet {
+		width: 10px; /* 중간 화면에서 점 크기 조정 */
+		height: 10px;
+	}
+}
+
+/* 큰 화면에서 화살표 크기 및 위치 조정 */
+
+/* Next 화살표 */
+@media (min-width: 1025px) {
+	.swiper-button-next {
+		font-size: 26px; /* 큰 화면에서 Next 화살표 크기 증가 */
+		right: 20px; /* 오른쪽 화살표 간격 */
+		top: 50%; /* 중앙으로 유지 */
+	}
+
+	.swiper-button-prev {
+		font-size: 26px; /* 큰 화면에서 Prev 화살표 크기 증가 */
+		left: 20px; /* 왼쪽 화살표 간격 */
+		top: 50%; /* 중앙으로 유지 */
+	}
+
+	.swiper-pagination-bullet {
+		width: 12px; /* 큰 화면에서 점 크기 증가 */
+		height: 12px;
+	}
+}
+
+/* 화살표가 맨 아래로 내려가도록 하기 위해 부모 요소에 relative 속성 추가 */
+.swiper-container {
+	position: relative; /* 부모 요소에 relative 추가 */
 }

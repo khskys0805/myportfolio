@@ -7,7 +7,7 @@ export default function Contact() {
 			className="min-h-screen flex flex-col justify-center items-center py-20 px-6 md:px-20 bg-pink-50 text-center"
 		>
 			<motion.h2
-				className="text-5xl font-bold mb-10 text-hotpink font-tangs"
+				className="text-4xl md:text-5xl font-bold mb-10 text-hotpink font-tangs"
 				initial={{ opacity: 0, y: -30 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.6 }}
@@ -17,13 +17,13 @@ export default function Contact() {
 			</motion.h2>
 
 			<motion.p
-				className="text-gray-600 mb-8 text-xl"
+				className="text-gray-600 mb-8 text-lg md:text-xl"
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.8, delay: 0.3 }}
 				viewport={{ once: true }}
 			>
-				저를 최종 선택하시겠습니까? <br className="hidden md:block" />
+				저를 최종 선택하시겠습니까? <br />
 				진심 어린 선택을 기다리고 있어요 💌
 			</motion.p>
 

@@ -1,12 +1,30 @@
-# React + Vite
+# ❤️ 나는 솔로 콘셉트 포트폴리오
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+"나는 솔로"에 진심인 제가, 이를 콘셉트로 제작한 웹 기반 포트폴리오를 소개합니다.
+프로그램처럼 저를 하나의 출연자처럼 풀어내었고, 기술 스택은 족자 스타일을 활용해 독특하게 디자인했습니다.
+또한, 지금까지 진행한 프로젝트들을 짧고 임팩트 있게 정리하여 한눈에 보기 쉽게 구성했습니다.
 
-Currently, two official plugins are available:
+## 🛠️ 사용 기술
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   React
+-   Tailwind CSS
+-   Vite
+-   JavaScript
+-   Vercel (배포)
 
-## Expanding the ESLint configuration
+## 🌟 주요 특징
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   "나는 솔로" 느낌을 살린 개성 있는 디자인
+-   기술 스택은 족자 형태로 구현
+-   프로젝트는 스와이퍼로 부드럽게 넘기기
+-   반응형 웹 지원
+
+## 📸 미리보기
+
+> (선택사항: 포트폴리오 사이트에 대한 스크린샷이나 이미지 추가 가능)
+
+## 🔗 배포 링크
+
+👉 [포트폴리오 바로가기](https://your-portfolio-link.com)
+
+## 🗂️ 프로젝트 구조

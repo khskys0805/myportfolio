@@ -65,25 +65,24 @@ export default function Introduction() {
 			</div>
 			{/* 텍스트 */}
 			<div className="z-10 flex flex-col items-center space-y-6 px-4 mt-[-150px]">
-				<h2 className="flex flex-row text-9xl text-white font-rix-inoo">
+				<h2 className="flex flex-row text-5xl md:text-7xl lg:text-9xl text-white font-rix-inoo">
 					나는
 				</h2>
-				<h2 className="flex flex-row text-9xl text-hotpink font-rix-inoo">
+				<h2 className="flex flex-row text-5xl md:text-7xl lg:text-9xl text-hotpink font-rix-inoo">
 					프론트엔드 개발자
 				</h2>
-				{/* 추가 텍스트 */}
 
-				<p className="absolute bottom-[70px] text-2xl font-bold text-gray-800 bg-white/70 rounded-lg px-6 py-2 shadow-md backdrop-blur">
+				<p className="relative md:absolute md:bottom-[70px] text-lg md:text-2xl font-bold text-gray-800 bg-white/70 rounded-lg px-4 md:px-6 py-2 shadow-md backdrop-blur mt-8 md:mt-0">
 					<Typewriter
 						options={{
 							strings: [
 								"사용자 경험을 가장 중요시하는 프론트엔드 개발자 김현수입니다.",
 							],
 							autoStart: true,
-							loop: true, // 반복하지 않음
-							delay: 100, // 타이핑 속도
-							startDelay: 10000, // 10초 대기
-							cursor: "|", // 커서 표시 (필요 없으면 빈 문자열로)
+							loop: true,
+							delay: 100,
+							startDelay: 10000,
+							cursor: "|",
 						}}
 					/>
 				</p>

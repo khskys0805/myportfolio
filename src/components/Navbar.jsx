@@ -28,7 +28,7 @@ export default function Navbar() {
 	];
 
 	return (
-		<nav className="fixed right-0 top-1/2 -translate-y-1/2 z-50 space-y-4">
+		<nav className="fixed right-0 top-1/2 -translate-y-1/2 z-50 space-y-4 md:block hidden">
 			{navItems.map((item) => (
 				<a
 					key={item.id}

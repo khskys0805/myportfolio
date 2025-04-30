@@ -1,4 +1,3 @@
-// Projects.jsx
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -58,9 +57,9 @@ export default function Projects() {
 	return (
 		<section
 			id="projects"
-			className="min-h-screen py-20 px-6 md:px-20 bg-white"
+			className="min-h-screen py-20 px-6 md:px-20 bg-white xl:pt-0 2xl:pt-0"
 		>
-			<h2 className="text-4xl mb-10 text-[#864bfd] font-tangs text-center">
+			<h2 className="text-4xl mb-10 text-[#864bfd] font-tangs text-center md:text-4xl">
 				프로젝트
 			</h2>
 
@@ -74,16 +73,16 @@ export default function Projects() {
 			>
 				{projects.map((project, index) => (
 					<SwiperSlide key={index}>
-						<div className="bg-[#211c1c] py-12 px-20 rounded-xl shadow-xl flex flex-col md:flex-row items-center gap-6">
-							<div className="md:w-1/3">
-								<h3 className="text-5xl tracking-tighter font-tangs text-white mb-6 py-2 text-center text-shadow inline-block border-y-[2.5px] border-coolpink relative">
+						<div className="bg-[#211c1c] py-12 px-6 md:px-12 xl:px-20 rounded-xl shadow-xl flex flex-col md:flex-row items-center gap-6">
+							<div className="md:w-1/3 text-center md:text-left">
+								<h3 className="text-2xl md:text-4xl font-tangs text-white mb-6 py-2 text-shadow inline-block border-y-[2.5px] border-coolpink relative">
 									{project.title}
 									<span className="text-lg absolute right-[-10px] bottom-[-10px] text-pink-300">
 										♡
 									</span>
 								</h3>
 
-								<p className="text-coolpink mb-4 font-tangs text-lg">
+								<p className="text-coolpink mb-4 font-tangs text-sm md:text-lg">
 									{project.description}
 								</p>
 
@@ -98,10 +97,10 @@ export default function Projects() {
 										</span>
 									))}
 								</div>
-								<div className="mt-4 text-white">
+								<div className="mt-4 text-white text-sm md:text-base">
 									{project.detail}
 								</div>
-								<div className="mt-6 flex gap-3">
+								<div className="mt-6 flex gap-3 flex-wrap justify-center md:justify-start">
 									<a
 										href={project.git_link}
 										target="_blank"

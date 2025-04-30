@@ -36,8 +36,44 @@ export default function Skills() {
 		},
 	];
 
+	// 클릭한 카드만 펼쳐지도록 toggle 함수
 	const toggleAccordion = (index) => {
 		setOpenIndex(openIndex === index ? null : index);
+	};
+
+	// 각 카드 출력 함수
+	const renderCard = (item, index) => {
+		const isOpen = openIndex === index; // 해당 카드가 열린 상태인지 확인
+		return (
+			<div
+				key={index}
+				className="bg-white shadow-lg rounded transition-all"
+			>
+				<button
+					onClick={() => toggleAccordion(index)} // 카드 클릭 시 해당 카드만 토글
+					className="w-full text-lg text-brown p-3 bg-lightyellow hover:bg-[#fbf3a2] text-center font-semibold font-health transition"
+				>
+					{item.title}
+				</button>
+
+				{/* 콘텐츠 펼쳐지는 부분 */}
+				<div
+					className={`transition-all duration-500 ease-in-out overflow-hidden ${
+						isOpen
+							? "max-h-[500px] opacity-100"
+							: "max-h-0 opacity-0"
+					}`}
+					style={{
+						transitionProperty: "max-height, opacity", // max-height, opacity에만 transition
+					}}
+				>
+					<div className="text-sm text-gray-700 px-2 py-2">
+						{item.content}
+					</div>
+					<div className="bg-[#fffcde] h-8 mt-3" />
+				</div>
+			</div>
+		);
 	};
 
 	return (
@@ -45,36 +81,60 @@ export default function Skills() {
 			<h2 className="text-center font-bold text-4xl text-brown mb-12 font-health">
 				📜 기술
 			</h2>
-			<div className="flex flex-row justify-center items-start gap-4 mt-10 px-4 overflow-x-auto">
+
+			{/* ✅ 2xl 이상: 6개 카드 한 줄에 딱 맞게 */}
+			<div className="hidden 2xl:flex justify-center gap-4 px-4">
 				{items.map((item, index) => (
-					<div
-						key={index}
-						className="w-32 shadow-lg bg-white" // 전체 div에 그림자 적용
-					>
-						<button
-							onClick={() => toggleAccordion(index)}
-							className="w-full text-xl text-brown p-3 bg-lightyellow hover:bg-[#fbf3a2] text-center font-semibold font-health transition"
-						>
-							{item.title}
-						</button>
-						<div
-							className={`overflow-hidden transition-all duration-500 ease-in-out ${
-								openIndex === index
-									? "max-h-[500px] opacity-100" // content 영역이 열릴 때
-									: "max-h-0 py-0 opacity-0" // content 영역이 닫힐 때
-							}`}
-							style={{
-								transitionProperty:
-									"max-height, padding, opacity",
-							}}
-						>
-							<div className="text-base text-gray-700 my-3 px-2">
-								{item.content}
-							</div>
-							<div className="bg-[#fffcde] h-12 transition-all duration-300" />
-						</div>
+					<div className="w-1/6" key={index}>
+						{renderCard(item, index)}
 					</div>
 				))}
+			</div>
+
+			{/* ✅ lg 이상 ~ 2xl 미만: 6개 카드가 한 줄에 나열 */}
+			{/* 이 부분을 숨기고, lg 이하에서는 grid로 세로로 쌓이게 처리 */}
+			<div className="hidden lg:flex justify-center gap-4 px-4 2xl:hidden">
+				{items.map((item, index) => (
+					<div className="w-1/6" key={index}>
+						{renderCard(item, index)}
+					</div>
+				))}
+			</div>
+
+			{/* ✅ lg 이하: 세로로 카드 쌓이기, 기술 부분에 margin-top 추가 */}
+			<div className="lg:hidden mt-10 px-4">
+				{/* 이 부분에 mt-10을 추가하여, lg 이하일 때 전체 기술 섹션에 margin-top을 적용 */}
+				<div className="grid lg:hidden grid-cols-1 gap-4">
+					{items.map((item, index) => (
+						<div
+							key={index}
+							className="bg-white shadow-lg rounded overflow-hidden"
+						>
+							<button
+								onClick={() => toggleAccordion(index)} // 카드 클릭 시 해당 카드만 토글
+								className="w-full text-lg text-brown p-3 bg-lightyellow hover:bg-[#fbf3a2] text-center font-semibold font-health transition"
+							>
+								{item.title}
+							</button>
+							{/* 콘텐츠 펼쳐지는 부분 */}
+							<div
+								className={`transition-all duration-500 ease-in-out overflow-hidden ${
+									openIndex === index
+										? "max-h-[500px] opacity-100"
+										: "max-h-0 opacity-0"
+								}`}
+								style={{
+									transitionProperty: "max-height, opacity",
+								}}
+							>
+								<div className="text-sm text-gray-700 px-2 py-2">
+									{item.content}
+								</div>
+								<div className="bg-[#fffcde] h-8 mt-3" />
+							</div>
+						</div>
+					))}
+				</div>
 			</div>
 		</>
 	);
